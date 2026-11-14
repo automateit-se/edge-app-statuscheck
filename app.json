@@ -1,0 +1,165 @@
+{
+  "author": "AutomateIT",
+  "license": "MIT",
+  "input": {
+    "name": {
+      "type": "text",
+      "name": "Namn",
+      "description": "Namnet på kontrollen, till exempel Statuskontroll. Blir en funktion med en knapp på dashboarden.",
+      "default": "Statuskontroll",
+      "required": true
+    },
+    "items": {
+      "type": "repeat",
+      "name": "Det här kontrolleras",
+      "description": "Sök upp funktionen, välj när den avviker och vad som ska sägas då. Det som är som det ska sägs inte.",
+      "input_fields": [
+        "item_function",
+        "item_when",
+        "item_value",
+        "item_text",
+        "item_sound"
+      ],
+      "min": 1,
+      "max": 50
+    },
+    "item_function": {
+      "type": "single_function_selector",
+      "name": "Funktion",
+      "required": true
+    },
+    "item_when": {
+      "type": "option",
+      "name": "Avviker när den",
+      "values": {
+        "active": "är öppen eller på",
+        "inactive": "är stängd eller av",
+        "above": "är över värdet",
+        "below": "är under värdet",
+        "equal": "har värdet"
+      },
+      "default": "active",
+      "required": true
+    },
+    "item_value": {
+      "type": "text",
+      "name": "Värde",
+      "description": "Bara för över, under eller har värdet, till exempel 50 (W) eller -15 (°C)."
+    },
+    "item_text": {
+      "type": "text",
+      "name": "Text",
+      "description": "Det som skrivs när den avviker, till exempel Altandörren är öppen.",
+      "required": true
+    },
+    "item_sound": {
+      "type": "text",
+      "name": "Ljud",
+      "description": "Ljudfil i Home Assistants mediamapp, till exempel iotopen/altandorren_oppen.mp3. Tomt: bara text."
+    },
+    "ok_text": {
+      "type": "text",
+      "name": "Text när allt är ok",
+      "default": "Allt är ok"
+    },
+    "ok_sound": {
+      "type": "text",
+      "name": "Ljud när allt är ok",
+      "description": "Till exempel iotopen/allt_ok.mp3. Tomt: inget ljud."
+    },
+    "unknown_text": {
+      "type": "text",
+      "name": "Text när status är okänd",
+      "description": "Står efter funktionens namn när den inte rapporterat något värde.",
+      "default": "okänd status"
+    },
+    "unknown_sound": {
+      "type": "text",
+      "name": "Ljud när status är okänd",
+      "description": "Spelas en gång om någon funktion saknar värde. Tomt: inget ljud."
+    },
+    "gap_s": {
+      "type": "number",
+      "name": "Sekunder mellan ljuden",
+      "description": "Så att ett ljud hinner spelas klart innan nästa börjar.",
+      "default": 4,
+      "min": 0,
+      "max": 60
+    },
+    "notify_outputs": {
+      "type": "multi_notification_output_selector",
+      "name": "Avisera också",
+      "description": "Valfritt. Texterna skickas också som avisering, till exempel e-post."
+    },
+    "notify_group": {
+      "type": "text",
+      "name": "Till",
+      "description": "En grupp från appen Mottagare, skriven som där."
+    },
+    "notify_always": {
+      "type": "toggle",
+      "name": "Avisera även när allt är ok",
+      "default": false
+    },
+    "trigger_topic": {
+      "type": "text",
+      "name": "Startas också av",
+      "description": "Valfritt. Ett topic där värdet 1 kör kontrollen, till exempel från en tryckknapp i KNX."
+    },
+    "player_device": {
+      "type": "single_device_selector",
+      "name": "Högtalare",
+      "description": "Bara om installationen har flera högtalare (enheter av typen audio). Tomt: den första.",
+      "filter": {
+        "type": "audio"
+      }
+    },
+    "group": {
+      "type": "text",
+      "name": "Gruppnamn",
+      "description": "Kopplingen till funktionerna i IoT Open (metadata statuscheck.group). Tomt: ett eget namn för den här installationen av appen."
+    },
+    "active_value": {
+      "type": "text",
+      "name": "Värde som betyder öppen eller på",
+      "description": "Tomt: funktionens state_open, state_on eller state_true, annars 1."
+    }
+  },
+  "guide": [
+    {
+      "id": "items",
+      "title": "Kontroll",
+      "description": "Vilka funktioner som kontrolleras. Kontrollen körs när någon trycker på knappen, till exempel innan man går och lägger sig eller lämnar lägenheten.",
+      "input_fields": [
+        "name",
+        "items"
+      ]
+    },
+    {
+      "id": "result",
+      "title": "Vad som händer",
+      "description": "Ljuden för det som avviker spelas efter varandra. Avviker inget spelas ljudet för allt ok.",
+      "input_fields": [
+        "ok_text",
+        "ok_sound",
+        "unknown_text",
+        "unknown_sound",
+        "gap_s",
+        "notify_outputs",
+        "notify_group",
+        "notify_always"
+      ]
+    },
+    {
+      "id": "advanced",
+      "title": "Avancerat",
+      "description": "Behövs sällan.",
+      "input_fields": [
+        "trigger_topic",
+        "player_device",
+        "group",
+        "active_value"
+      ]
+    }
+  ]
+}

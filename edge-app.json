@@ -1,0 +1,11 @@
+{
+  "name": "Statuskontroll",
+  "category": "notification",
+  "short_description": "Kontrollerar med en knapptryckning om dörrar, fönster och apparater är som de ska, och säger vad som avviker, till exempel Altandörren är öppen, eller Allt är ok.",
+  "tags": [
+    "notification",
+    "sound",
+    "status",
+    "care"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Statuskontroll",
+  "items": [
+    {
+      "item_function": 2101,
+      "item_when": "active",
+      "item_text": "Altandörren är öppen",
+      "item_sound": "iotopen/altandorren_oppen.mp3"
+    },
+    {
+      "item_function": 2102,
+      "item_when": "inactive",
+      "item_text": "Ytterdörren är olåst",
+      "item_sound": "iotopen/ytterdorren_olast.mp3"
+    },
+    {
+      "item_function": 2103,
+      "item_when": "active",
+      "item_text": "Fönstret i sovrummet är öppet",
+      "item_sound": "iotopen/fonster_sovrum.mp3"
+    },
+    {
+      "item_function": 2104,
+      "item_when": "active",
+      "item_text": "Kaffebryggaren är på",
+      "item_sound": "iotopen/kaffebryggaren_pa.mp3"
+    },
+    {
+      "item_function": 2105,
+      "item_when": "above",
+      "item_value": 50,
+      "item_text": "Spisen är på",
+      "item_sound": "iotopen/spisen_pa.mp3"
+    },
+    {
+      "item_function": 2106,
+      "item_when": "above",
+      "item_value": 30,
+      "item_text": "Strykjärnet är på",
+      "item_sound": "iotopen/strykjarnet_pa.mp3"
+    },
+    {
+      "item_function": 2107,
+      "item_when": "active",
+      "item_text": "Kylskåpsdörren är öppen",
+      "item_sound": "iotopen/kylskapet_oppet.mp3"
+    },
+    {
+      "item_function": 2108,
+      "item_when": "above",
+      "item_value": -15,
+      "item_text": "Frysen är för varm",
+      "item_sound": "iotopen/frysen_varm.mp3"
+    },
+    {
+      "item_function": 2109,
+      "item_when": "active",
+      "item_text": "Vattnet i badrummet rinner",
+      "item_sound": "iotopen/vatten_rinner.mp3"
+    },
+    {
+      "item_function": 2110,
+      "item_when": "active",
+      "item_text": "Lampan i hallen är tänd",
+      "item_sound": "iotopen/hallampan.mp3"
+    }
+  ],
+  "ok_text": "Allt är ok",
+  "ok_sound": "iotopen/allt_ok.mp3",
+  "unknown_sound": "iotopen/okand_status.mp3",
+  "gap_s": 4
+}
