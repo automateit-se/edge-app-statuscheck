@@ -44,7 +44,15 @@
     "item_value": {
       "type": "text",
       "name": "Värde",
-      "description": "Bara för över, under eller har värdet, till exempel 50 (W) eller -15 (°C)."
+      "description": "Till exempel 50 (W) eller -15 (°C), eller den text som betyder avvikelse.",
+      "required": true,
+      "show_if": {
+        "item_when": [
+          "above",
+          "below",
+          "equal"
+        ]
+      }
     },
     "item_text": {
       "type": "text",
@@ -55,7 +63,8 @@
     "item_sound": {
       "type": "text",
       "name": "Ljud",
-      "description": "Ljudfil i Home Assistants mediamapp, till exempel iotopen/altandorren_oppen.mp3. Tomt: bara text."
+      "description": "Ett ljud från installationens högtalare, till exempel iotopen/altandorren_oppen.mp3. Tomt: bara text.",
+      "suggest": "media"
     },
     "ok_text": {
       "type": "text",
@@ -65,7 +74,8 @@
     "ok_sound": {
       "type": "text",
       "name": "Ljud när allt är ok",
-      "description": "Till exempel iotopen/allt_ok.mp3. Tomt: inget ljud."
+      "description": "Till exempel iotopen/allt_ok.mp3. Tomt: inget ljud.",
+      "suggest": "media"
     },
     "unknown_text": {
       "type": "text",
@@ -76,7 +86,8 @@
     "unknown_sound": {
       "type": "text",
       "name": "Ljud när status är okänd",
-      "description": "Spelas en gång om någon funktion saknar värde. Tomt: inget ljud."
+      "description": "Spelas en gång om någon funktion saknar värde. Tomt: inget ljud.",
+      "suggest": "media"
     },
     "gap_s": {
       "type": "number",
