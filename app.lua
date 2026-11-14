@@ -13,7 +13,7 @@
 --     För länge 0.4: the items on their functions (statuscheck.group, .when, .value, .text, .sound), the check's own
 --     settings on the check function (statuscheck.ok_text, .ok_sound, .unknown_sound, .gap_s).
 
-local VERSION = "0.1.0"
+local VERSION = "0.1.1"
 local PREFIX = "statuscheck"
 local SYNC_WAIT_S = 3
 

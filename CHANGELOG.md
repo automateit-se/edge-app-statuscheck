@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 0.1.1
+
+- The form: *Värde* is shown only for *är över värdet*, *är under värdet* and *har värdet*, and is then required.
+  The sounds can be chosen from the installation's sound files. Both need App Management 0.1.16 (`show_if`,
+  `suggest`); IoT Open's own form shows the fields as before.
+
 ## 0.1.0
 
 - First version. A check function of type `button`: `1` runs it, from the dashboard, a KNX button or anything else;

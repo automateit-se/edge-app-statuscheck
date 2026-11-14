@@ -44,7 +44,9 @@ not taken for a change. A function can be in several checks (`statuscheck.group`
 its text and sound are shared.
 
 The form has three pages: *Kontroll*, *Vad som händer* and *Avancerat* (`trigger_topic`, `player_device`, `group`,
-`active_value`).
+`active_value`). In [App Management](https://github.com/automateit-se/appmanagement) the functions can be searched
+by name, type or metadata and show their latest value, *Värde* is shown only when it is needed (`show_if`), the
+sounds can be chosen from the installation's sound files (`suggest: media`), and an item can be copied.
 
 ## Payload of the notification
 
